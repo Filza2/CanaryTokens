@@ -66,9 +66,15 @@ Content-Disposition: form-data; name="redirect_url"
 -----------------------------8386526011242191222501571313--"""
 req=post("https://canarytokens.org/generate",headers={'Host': 'canarytokens.org','User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0','Accept': 'application/json, text/javascript, */*; q=0.01','Accept-Language': 'ar,en-US;q=0.7,en;q=0.3','Accept-Encoding': 'gzip, deflate','X-Requested-With': 'XMLHttpRequest','Content-Type': 'multipart/form-data; boundary=---------------------------8386526011242191222501571313','Content-Length': '1451','Origin': 'https://canarytokens.org','Referer': 'https://canarytokens.org/generate','Te': 'trailers','Connection': 'close'},data=d).json()
 try:
-    token=req["Token"];em=req["Email"]
+    token=req["Token"];em=req["Email"];url=f'https://canarytokens.com/TweakPY.vv1ck/{token}'
+    try:
+        res=post('https://hideuri.com/api/v1/shorten',headers={'Host': 'hideuri.com','Cookie': '_cfvdata=as874as89sa9as84s89f4asfa8f','User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0','Accept': 'application/json, text/javascript, */*; q=0.01','Accept-Language': 'ar,en-US;q=0.7,en;q=0.3','Accept-Encoding': 'gzip, deflate','Referer': 'https://hideuri.com/','Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8','X-Requested-With': 'XMLHttpRequest','Content-Length': '47','Origin': 'https://hideuri.com','Te': 'trailers'},data=f'url={url}')
+        if 'result_url' in res.json():shorted_url=res.json()['result_url']
+        else:pass
+    except:shorted_url='Null'
     print("-------------------------------")
     print(f'[+] Your Token: {token}')
-    print(f'[+] Your url: https://canarytokens.com/TweakPY.vv1ck/{token}')
+    print(f'[+] Your url: {url}')
+    print(f'[+] Shorted url: {shorted_url}')
     print(f'[+] Your Email: {em}')
 except:exit('[!] Error ..')
