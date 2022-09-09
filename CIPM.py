@@ -71,7 +71,6 @@ Content-Disposition: form-data; name="redirect_url"
 -----------------------------6640491382465600322232798945--
 """
 req=post("https://canarytokens.org/generate",headers={'Host': 'canarytokens.com','User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0','Accept': 'application/json, text/javascript, */*; q=0.01','Accept-Language': 'ar,en-US;q=0.7,en;q=0.3','Accept-Encoding': 'gzip, deflate','X-Requested-With': 'XMLHttpRequest','Content-Type': 'multipart/form-data; boundary=---------------------------6640491382465600322232798945','Content-Length': '1559','Origin': 'https://canarytokens.com','Referer': 'https://canarytokens.com/generate','Sec-Fetch-Dest': 'empty','Sec-Fetch-Mode': 'cors','Sec-Fetch-Site': 'same-origin','Te': 'trailers','Connection': 'close'},data=d).json()
-print(req)
 try:
     token=req["Token"];em=req["Email"];url=f'https://canarytokens.com/TweakPY.vv1ck/{token}'
     try:
