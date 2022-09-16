@@ -1,4 +1,5 @@
-from requests import post
+try:from requests import post
+except Exception as e:print(f'[!] Download The Missing Module ! , {e}');exit()
 print("""
  ██████╗██╗██████╗ ███╗   ███╗
 ██╔════╝██║██╔══██╗████╗ ████║
