@@ -6,5 +6,5 @@ A canary token is a file, URL, API key, or other resource that is monitored for 
  
  
 ## Offical docs/resources for Canarytokens 
-https://docs.canarytokens.org/guide/
+https://docs.canarytokens.org/guide/<br>
 https://github.com/thinkst/canarytokens
